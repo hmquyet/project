@@ -9,15 +9,12 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
-        ),
-        backgroundColor: Color.fromARGB(255, 35, 78, 45),
+        
+        backgroundColor: Color.fromARGB(255, 53, 94, 74),
         title: Center(child: Text('báo cáo $index')),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 35, 78, 45),
+        color: Color.fromARGB(255, 53, 94, 74),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

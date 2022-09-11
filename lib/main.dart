@@ -16,9 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       // home: ThongSoHoatDong(),
        //home: XemBaoCao(),c
         //home: SettingScreen(),
+        
 
       home: LoginScreen(),
 

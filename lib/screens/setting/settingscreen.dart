@@ -10,15 +10,11 @@ class SettingScreen extends StatelessWidget {
     return Container(
         child: Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
-        ),
-        backgroundColor: Color.fromARGB(255, 35, 78, 45),
+        backgroundColor: Color.fromARGB(255, 53, 94, 74),
         title: Center(child: Text('Cài đặt thông số')),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 35, 78, 45),
+        color: Color.fromARGB(255, 53, 94, 74),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -49,9 +45,7 @@ class SettingScreen extends StatelessWidget {
                 color: Colors.white,
                 size: 30,
               ),
-              onPressed: () {
-               
-              },
+              onPressed: () {},
             ),
             IconButton(
               icon: Icon(
@@ -77,53 +71,49 @@ class SettingScreen extends StatelessWidget {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 35, 78, 45),
+                      color: Color.fromARGB(255, 53, 94, 74),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                    Container(
-                      child:Text(
-                        ' Số lần nhấn (lần)',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
+                      Container(
+                        child: Text(
+                          ' Số lần nhấn (lần)',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                          ),
                         ),
-                      ),),
-                      
-                    Container(
+                      ),
+                      Container(
                         width: 100,
                         height: 60,
-                        
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15)
-                        ),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
                         child: TextField(
+                          keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 25,
-
+                          style: TextStyle(
+                            fontSize: 25,
+                          ),
+                          decoration: InputDecoration(
+                              fillColor: Color.fromARGB(255, 255, 255, 255),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(15))),
                         ),
-                        decoration: InputDecoration(
-                            
-                            fillColor: Color.fromARGB(255, 255, 255, 255),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(15))),
-                      ),
                       )
-                      
                     ],
                   )),
-                  SizedBox(
-                height: 10,
+              SizedBox(
+                height: 20,
               ),
-                  Container(
+              Container(
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 35, 78, 45),
+                      color: Color.fromARGB(255, 53, 94, 74),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -138,7 +128,6 @@ class SettingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
                       Container(
                         width: 100,
                         height: 60,
@@ -146,6 +135,7 @@ class SettingScreen extends StatelessWidget {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
                         child: TextField(
+                          keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 25,
@@ -158,14 +148,14 @@ class SettingScreen extends StatelessWidget {
                       )
                     ],
                   )),
-                  SizedBox(
-                height: 10,
+              SizedBox(
+                height: 20,
               ),
-                  Container(
+              Container(
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 35, 78, 45),
+                      color: Color.fromARGB(255, 53, 94, 74),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -183,46 +173,47 @@ class SettingScreen extends StatelessWidget {
                       Container(
                         width: 100,
                         height: 60,
-                        decoration: BoxDecoration(
+                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
                         child: TextField(
+                          keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            
                             fontSize: 25,
                           ),
+                          
                           decoration: InputDecoration(
-                              fillColor: Color.fromARGB(255, 255, 255, 255),
+
+
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15))),
+
+                                  borderRadius: BorderRadius.circular(15))
+                            ), 
                         ),
                       )
                     ],
                   )),
-                   SizedBox(
+              SizedBox(
                 height: 30,
               ),
-                   ElevatedButton(
+              ElevatedButton(
                 child: Text(
                   'START',
                   style: TextStyle(
                       fontSize: 17, color: Color.fromARGB(255, 241, 241, 241)),
                 ),
-                onPressed: () {
-                 
-                },
+                onPressed: () {},
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(100, 60)),
                     backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 17, 186, 144)),
+                      Color.fromARGB(255, 8, 167, 90),
+                    ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ))),
               )
-
-
             ],
           ),
         ),

@@ -8,40 +8,46 @@ class MainDraw extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Color.fromARGB(255, 251, 251, 251),
-      child: Column(
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            height: 100,
-            margin: EdgeInsets.only(top: 30),
-            color: Color.fromARGB(255, 35, 78, 45),
-            /* decoration: BoxDecoration(
-                color: Colors.blue,
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://www.facebook.com/photo?fbid=3127659670880202&set=a.1395938480719005'))), */
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start, //theo chiều row
-            children: [
-              TextButton(
-                  onPressed: () {
-                    Navigator.of(context)
-                        .pushNamed(RoutesManager.Loginpage);
-                  },
-                  child: Text(
-                    'Đăng xuất',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 50, 48, 48),
-                      fontSize: 15,
-                     
-                     
-                      
-                    ),
-                  ))
-            ],
-          )
-        ],
+      child: ListView(
+        
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+               decoration: BoxDecoration(
+                color: Color.fromARGB(255, 53, 94, 74),
+               ),
+              accountName: Text('Nguyễn Văn ABC'), 
+              accountEmail: Text('nva@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: ClipOval(
+                  
+                ),
+              ),
+              ),
+              ListTile(
+              leading: Icon(Icons.person),
+              title: Text(
+                'Thông tin cá nhân',
+                style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromARGB(255, 79, 77, 77)),
+              ),
+              onTap: () =>
+                  Navigator.of(context).pushNamed(RoutesManager.Loginpage)),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Đăng xuất',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w400,
+                  color: Color.fromARGB(255, 79, 77, 77)
+                ),
+              ),
+              onTap: () => Navigator.of(context).pushNamed(RoutesManager.Loginpage)
+            ),
+            
+          ],
+        
       ),
     );
   }
