@@ -5,6 +5,7 @@ import 'package:flutter_application_1/routes/routes.dart';
 
 class LoginScreen extends StatelessWidget {
 /*   bool tapPassword = true; */
+
   LoginScreen({Key? key}) : super(key: key);
 
   @override

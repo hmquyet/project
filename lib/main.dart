@@ -21,8 +21,7 @@ class MyApp extends StatelessWidget {
        //home: XemBaoCao(),c
         //home: SettingScreen(),
         
-
-      home: LoginScreen(),
+      home:HomeScreen(),
 
         initialRoute: RoutesManager.Loginpage,
       onGenerateRoute: RoutesManager.genarateRoute, 

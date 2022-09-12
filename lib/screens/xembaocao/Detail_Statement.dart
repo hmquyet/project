@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/routes.dart';
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatefulWidget {
  
   final int index;
   DetailPage(this.index);
 
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  int selectedIndex = 3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         
         backgroundColor: Color.fromARGB(255, 53, 94, 74),
-        title: Center(child: Text('báo cáo $index')),
+        title: Center(child: Text('báo cáo ${widget.index}')),
       ),
       bottomNavigationBar: BottomAppBar(
         color: Color.fromARGB(255, 53, 94, 74),
@@ -22,7 +28,7 @@ class DetailPage extends StatelessWidget {
               icon: Icon(
                 Icons.home_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 0) ? 30 : 20,
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(RoutesManager.Homepage);
@@ -32,7 +38,7 @@ class DetailPage extends StatelessWidget {
               icon: Icon(
                 Icons.public_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 1) ? 30 : 20,
               ),
               onPressed: () {
                 Navigator.of(context)
@@ -43,21 +49,19 @@ class DetailPage extends StatelessWidget {
               icon: Icon(
                 Icons.settings_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 2) ? 30 : 20,
               ),
               onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.SettingPage);
+                Navigator.of(context).pushNamed(RoutesManager.StatementPage);
               },
             ),
             IconButton(
               icon: Icon(
                 Icons.description_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 3) ? 30 : 20,
               ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.StatementPage);
-              },
+              onPressed: () {},
             ),
           ],
         ),

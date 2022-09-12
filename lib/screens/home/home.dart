@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/home/main_draw.dart';
 import 'package:flutter_application_1/routes/routes.dart';
+import 'package:flutter_application_1/screens/setting/settingscreen.dart';
+import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
+import 'package:flutter_application_1/screens/xembaocao/Statement.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int selectedIndex = 0 ;
+  
+  @override
   Widget build(BuildContext context) {
     return Container(
-      
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage('assets/images/home.png'))),
       child: Scaffold(
@@ -22,26 +31,28 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Color.fromARGB(255, 53, 94, 74),
           title: Center(child: Text('Kiểm tra chất lượng sản phẩm')),
         ),
-         bottomNavigationBar: BottomAppBar(
+        bottomNavigationBar: BottomAppBar(
           color: Color.fromARGB(255, 53, 94, 74),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(
+            IconButton(
                 icon: Icon(
                   Icons.home_outlined,
                   color: Colors.white,
-                  size: 30,
+
+                  size: (selectedIndex == 0) ? 30 : 20,
+
                 ),
                 onPressed: () {
-                 
+                  
                 },
               ),
               IconButton(
                 icon: Icon(
                   Icons.public_outlined,
                   color: Colors.white,
-                  size: 30,
+                  size: (selectedIndex == 1) ? 30 : 20,
                 ),
                 onPressed: () {
                   Navigator.of(context)
@@ -52,15 +63,18 @@ class HomeScreen extends StatelessWidget {
                 icon: Icon(
                   Icons.settings_outlined,
                   color: Colors.white,
-                  size: 30,
+                  size: (selectedIndex == 2) ? 30 : 20,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed(RoutesManager.SettingPage);
+                },
               ),
               IconButton(
                 icon: Icon(
                   Icons.description_outlined,
                   color: Colors.white,
-                  size: 30,
+                  size: (selectedIndex == 3) ? 30 : 20,
                 ),
                 onPressed: () {
                   Navigator.of(context).pushNamed(RoutesManager.StatementPage);
@@ -71,7 +85,7 @@ class HomeScreen extends StatelessWidget {
         ),
         drawer: MainDraw(),
         body: Padding(
-          padding: const EdgeInsets.only(top: 220),
+          padding: const EdgeInsets.only(top: 290),
           child: Center(
               child: Container(
             width: 350,

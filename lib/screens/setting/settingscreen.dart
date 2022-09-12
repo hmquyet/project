@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/routes.dart';
 import 'package:flutter_application_1/screens/xembaocao/Detail_Statement.dart';
 
-class SettingScreen extends StatelessWidget {
+class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SettingScreen> createState() => _SettingScreenState();
+}
+
+class _SettingScreenState extends State<SettingScreen> {
+  int selectedIndex = 2;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +28,7 @@ class SettingScreen extends StatelessWidget {
               icon: Icon(
                 Icons.home_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 0) ? 30 : 20,
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(RoutesManager.Homepage);
@@ -32,26 +38,27 @@ class SettingScreen extends StatelessWidget {
               icon: Icon(
                 Icons.public_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 1) ? 30 : 20,
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .pushNamed(RoutesManager.ThongSoHoatDongPage);
+                Navigator.of(context).pushNamed(RoutesManager.ThongSoHoatDongPage);
               },
             ),
             IconButton(
               icon: Icon(
                 Icons.settings_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 2) ? 30 : 20,
               ),
-              onPressed: () {},
+              onPressed: () {
+                
+              },
             ),
             IconButton(
               icon: Icon(
                 Icons.description_outlined,
                 color: Colors.white,
-                size: 30,
+                size: (selectedIndex == 3) ? 30 : 20,
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(RoutesManager.StatementPage);
