@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/routes.dart';
-import 'package:flutter_application_1/screens/xembaocao/Detail_Statement.dart';
+import 'package:flutter_application_1/screens/xembaocao/chitiet_baocao.dart';
+import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  int selectedIndex = 2;
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,54 +20,7 @@ class _SettingScreenState extends State<SettingScreen> {
         backgroundColor: Color.fromARGB(255, 53, 94, 74),
         title: Center(child: Text('Cài đặt thông số')),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 53, 94, 74),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.home_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 0) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.Homepage);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.public_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 1) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.ThongSoHoatDongPage);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.settings_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 2) ? 30 : 20,
-              ),
-              onPressed: () {
-                
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.description_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 3) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.StatementPage);
-              },
-            ),
-          ],
-        ),
-      ),
+     
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -210,7 +164,13 @@ class _SettingScreenState extends State<SettingScreen> {
                   style: TextStyle(
                       fontSize: 17, color: Color.fromARGB(255, 241, 241, 241)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: ((context) => ThongSoHoatDong())));
+
+                },
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(100, 60)),
                     backgroundColor: MaterialStateProperty.all<Color>(

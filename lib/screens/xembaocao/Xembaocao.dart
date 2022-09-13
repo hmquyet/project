@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/xembaocao/Detail_Statement.dart';
+import 'package:flutter_application_1/screens/xembaocao/chitiet_baocao.dart';
 import 'package:flutter_application_1/routes/routes.dart';
 
 class XemBaoCao extends StatefulWidget {
@@ -19,55 +19,7 @@ class _XemBaoCaoState extends State<XemBaoCao> {
         backgroundColor: Color.fromARGB(255, 53, 94, 74),
         title: Center(child: Text('Xem báo cáo')),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 53, 94, 74),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.home_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 0) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.Homepage);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.public_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 1) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context)
-                    .pushNamed(RoutesManager.ThongSoHoatDongPage);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.settings_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 2) ? 30 : 20,
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(RoutesManager.SettingPage);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.description_outlined,
-                color: Colors.white,
-                size: (selectedIndex == 3) ? 30 : 20,
-              ),
-              onPressed: () {
-                
-              },
-            ),
-          ],
-        ),
-      ),
+     
       body: _buidListView(),
     ));
   }

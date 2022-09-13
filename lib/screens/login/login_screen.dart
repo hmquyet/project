@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/routes.dart';
+import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
+
+
 
 //import 'package:flutter_application_1/screens/home/home.dart';
 
@@ -12,8 +15,9 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage('assets/images/login.png'))),
+        image: DecorationImage(
+            image: AssetImage('assets/images/login.png'), fit: BoxFit.cover),
+      ),
       child: Scaffold(
         backgroundColor: Color.fromARGB(0, 249, 249, 249),
         body: Padding(
@@ -70,7 +74,12 @@ class LoginScreen extends StatelessWidget {
                             color: Color.fromARGB(255, 241, 241, 241)),
                       ),
                       onPressed: () {
-                        Navigator.of(context).pushNamed(RoutesManager.Homepage);
+                        
+                        Navigator.push(
+                          context,
+                          new MaterialPageRoute(builder:((context) => ButtomNagivationBar()))
+                        );
+
                       },
                       style: ButtonStyle(
                           fixedSize:

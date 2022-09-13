@@ -3,7 +3,8 @@ import 'package:flutter_application_1/screens/home/main_draw.dart';
 import 'package:flutter_application_1/routes/routes.dart';
 import 'package:flutter_application_1/screens/setting/settingscreen.dart';
 import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
-import 'package:flutter_application_1/screens/xembaocao/Statement.dart';
+import 'package:flutter_application_1/screens/xembaocao/Xembaocao.dart';
+import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,13 +14,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedIndex = 0 ;
+
   
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/home.png'))),
+          image: DecorationImage(image: AssetImage('assets/images/home.png'), fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Color.fromARGB(0, 255, 255, 255),
         appBar: AppBar(
@@ -31,58 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Color.fromARGB(255, 53, 94, 74),
           title: Center(child: Text('Kiểm tra chất lượng sản phẩm')),
         ),
-        bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 53, 94, 74),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-            IconButton(
-                icon: Icon(
-                  Icons.home_outlined,
-                  color: Colors.white,
-
-                  size: (selectedIndex == 0) ? 30 : 20,
-
-                ),
-                onPressed: () {
-                  
-                },
-              ),
-              IconButton(
-                icon: Icon(
-                  Icons.public_outlined,
-                  color: Colors.white,
-                  size: (selectedIndex == 1) ? 30 : 20,
-                ),
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamed(RoutesManager.ThongSoHoatDongPage);
-                },
-              ),
-              IconButton(
-                icon: Icon(
-                  Icons.settings_outlined,
-                  color: Colors.white,
-                  size: (selectedIndex == 2) ? 30 : 20,
-                ),
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamed(RoutesManager.SettingPage);
-                },
-              ),
-              IconButton(
-                icon: Icon(
-                  Icons.description_outlined,
-                  color: Colors.white,
-                  size: (selectedIndex == 3) ? 30 : 20,
-                ),
-                onPressed: () {
-                  Navigator.of(context).pushNamed(RoutesManager.StatementPage);
-                },
-              ),
-            ],
-          ),
-        ),
+        
         drawer: MainDraw(),
         body: Padding(
           padding: const EdgeInsets.only(top: 290),
@@ -116,9 +66,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(20),
                       ))),
                   onPressed: () {
-                    Navigator.of(context)
-                        .pushNamed(RoutesManager.ThongSoHoatDongPage);
-                  },
+                    Navigator.push(
+                          context,
+                          new MaterialPageRoute(builder:((context) => ThongSoHoatDong()))
+                        );
+                        
+                  }
                 ),
                 SizedBox(
                   height: 12,
