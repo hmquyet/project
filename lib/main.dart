@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/routes/routes.dart';
 import 'package:flutter_application_1/screens/login/login_screen.dart';
 import 'package:flutter_application_1/screens/home/home.dart';
 import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
@@ -24,8 +23,7 @@ class MyApp extends StatelessWidget {
         
       home:LoginScreen(),
 
-        initialRoute: RoutesManager.Loginpage,
-      onGenerateRoute: RoutesManager.genarateRoute, 
+     
     );
   }
 }

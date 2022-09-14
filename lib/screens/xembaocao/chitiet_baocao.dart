@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/routes/routes.dart';
+
 class DetailPage extends StatefulWidget {
  
   final int index;

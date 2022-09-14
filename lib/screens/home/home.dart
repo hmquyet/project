@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/home/main_draw.dart';
-import 'package:flutter_application_1/routes/routes.dart';
-import 'package:flutter_application_1/screens/setting/settingscreen.dart';
-import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
-import 'package:flutter_application_1/screens/xembaocao/Xembaocao.dart';
 import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/home.png'), fit: BoxFit.cover)),
+          image: DecorationImage(image: AssetImage('assets/images/home12.png'), fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Color.fromARGB(0, 255, 255, 255),
         appBar: AppBar(
@@ -68,8 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     Navigator.push(
                           context,
-                          new MaterialPageRoute(builder:((context) => ThongSoHoatDong()))
-                        );
+                          new MaterialPageRoute(
+                              builder: ((context) => ButtomNagivationBar(1))));
                         
                   }
                 ),
@@ -85,7 +81,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(RoutesManager.SettingPage);
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: ((context) => ButtomNagivationBar(2))));
                   },
                   style: ButtonStyle(
                       shadowColor: MaterialStateProperty.all<Color>(
@@ -111,8 +110,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   onPressed: () {
-                    Navigator.of(context)
-                        .pushNamed(RoutesManager.StatementPage);
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: ((context) => ButtomNagivationBar(3))));
                   },
                   style: ButtonStyle(
                       shadowColor: MaterialStateProperty.all<Color>(

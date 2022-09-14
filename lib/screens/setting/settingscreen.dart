@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/routes.dart';
 import 'package:flutter_application_1/screens/xembaocao/chitiet_baocao.dart';
 import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
+import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -165,10 +166,10 @@ class _SettingScreenState extends State<SettingScreen> {
                       fontSize: 17, color: Color.fromARGB(255, 241, 241, 241)),
                 ),
                 onPressed: () {
-Navigator.push(
+                      Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: ((context) => ThongSoHoatDong())));
+                          builder: ((context) => ButtomNagivationBar(1))));
 
                 },
                 style: ButtonStyle(

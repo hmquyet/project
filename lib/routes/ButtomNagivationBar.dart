@@ -7,14 +7,16 @@ import 'package:flutter_application_1/screens/xembaocao/Xembaocao.dart';
 import 'package:flutter_application_1/screens/setting/settingscreen.dart';
 
 class ButtomNagivationBar extends StatefulWidget {
-  const ButtomNagivationBar({Key? key}) : super(key: key);
+   int selectedIndex;
+  ButtomNagivationBar(this.selectedIndex);
+  
 
   @override
   State<ButtomNagivationBar> createState() => _ButtomNagivationBarState();
 }
 
 class _ButtomNagivationBarState extends State<ButtomNagivationBar> {
-  int selectedIndex = 0;
+  
 
   final Screens = [
     HomeScreen(),
@@ -27,12 +29,12 @@ class _ButtomNagivationBarState extends State<ButtomNagivationBar> {
     
 
     return Scaffold(
-      body: Screens[selectedIndex],
+      body: Screens[widget.selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         
-        currentIndex: selectedIndex,
+        currentIndex: widget.selectedIndex,
         onTap: (index) =>setState(() 
-          => selectedIndex = index,
+          => widget.selectedIndex = index,
         ),
         
         iconSize: 30,

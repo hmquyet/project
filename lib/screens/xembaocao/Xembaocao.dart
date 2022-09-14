@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/xembaocao/chitiet_baocao.dart';
-import 'package:flutter_application_1/routes/routes.dart';
+
 
 class XemBaoCao extends StatefulWidget {
   const XemBaoCao({Key? key}) : super(key: key);
