@@ -1,16 +1,20 @@
-import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
+import 'package:flutter_application_1/UI/screens/thongsohoatdong.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/home/home.dart';
-import 'package:flutter_application_1/screens/login/login_screen.dart';
-import 'package:flutter_application_1/screens/setting/settingscreen.dart';
-import 'package:flutter_application_1/screens/xembaocao/Xembaocao.dart';
+import 'package:flutter_application_1/UI/screens/home.dart';
+import 'package:flutter_application_1/UI/screens/login_screen.dart';
+import 'package:flutter_application_1/UI/screens/settingscreen.dart';
+import 'package:flutter_application_1/UI/screens/Xembaocao.dart';
+import 'package:flutter_application_1/UI/screens/splashpage.dart';
+
+
+
 
 class RoutesManager {
   static const String Loginpage = '/';
   static const String Homepage = '/Homepage';
   static const String ThongSoHoatDongPage = '/thongsohoatdongpage';
-  static const String SettingPage = '/settingpage';
+  static const String Splashpage = '/splashpage';
   static const String StatementPage = '/statementpage';
 
   static Route<dynamic> genarateRoute(RouteSettings settings) {
@@ -27,13 +31,15 @@ class RoutesManager {
         return MaterialPageRoute(
           builder: (context) => ThongSoHoatDong(),
         );
-      case SettingPage:
-        return MaterialPageRoute(
-          builder: (context) => SettingScreen(),
-        );
+    
       case StatementPage:
         return MaterialPageRoute(
           builder: (context) => XemBaoCao(),
+        );
+
+        case Splashpage:
+        return MaterialPageRoute(
+          builder: (context) => SplashPage(),
         );
 
       default:

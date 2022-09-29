@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/routes/routes.dart';
-import 'package:flutter_application_1/screens/xembaocao/chitiet_baocao.dart';
-import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
-import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
+import 'package:flutter_application_1/UI/routes/routes.dart';
+import 'package:flutter_application_1/UI/screens/chitiet_baocao.dart';
+import 'package:flutter_application_1/UI/screens/thongsohoatdong.dart';
+import 'package:flutter_application_1/UI/routes/ButtomNagivationBar.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _SettingScreenState extends State<SettingScreen> {
     return Container(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 53, 94, 74),
+        backgroundColor: Color.fromARGB(255, 0, 41, 77),
         title: Center(child: Text('Cài đặt thông số')),
       ),
      
@@ -33,7 +33,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 53, 94, 74),
+                      color: Color.fromARGB(255, 0, 41, 77),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -75,7 +75,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 53, 94, 74),
+                      color: Color.fromARGB(255, 0, 41, 77),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -117,7 +117,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 53, 94, 74),
+                      color: Color.fromARGB(255, 0, 41, 77),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -175,7 +175,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(100, 60)),
                     backgroundColor: MaterialStateProperty.all<Color>(
-                      Color.fromARGB(255, 8, 167, 90),
+                      Color.fromARGB(255, 30, 128, 80),
                     ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(

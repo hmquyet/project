@@ -1,29 +1,42 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/login/login_screen.dart';
-import 'package:flutter_application_1/screens/home/home.dart';
-import 'package:flutter_application_1/screens/thongsohoatdong/thongsohoatdong.dart';
-import 'package:flutter_application_1/screens/xembaocao/Xembaocao.dart';
-import 'package:flutter_application_1/screens/setting/settingscreen.dart';
+ import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI/screens/login_screen.dart';
+ import 'package:flutter_application_1/UI/screens/home.dart';
+// import 'package:flutter_application_1/blocs/login_bloc.dart';
+// import 'UI/screens/splashpage.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+// import 'UI/routes/ButtomNagivationBar.dart';
+//  import 'package:flutter_application_1/authentication/authentication_event.dart';
+import 'package:flutter_application_1/authentication/blocs.dart';
+import 'package:flutter_application_1/authentication/states.dart';
+import 'package:flutter_application_1/authentication/events.dart';
+
+ import 'UI/screens/thongsohoatdong.dart';
+ import 'package:flutter_application_1/repository/api_base.dart';
+
 
 void main() {
-  runApp(const MyApp());
+ 
+ runApp(  MyApp());
+  // AuthRepo authRepo = AuthRepo();
+  //  authRepo.login("eve.holt@reqress.in", "cityslicka");
+
 }
 
 class MyApp extends StatelessWidget {
-  
-  const MyApp({Key? key}) : super(key: key);
+   
+
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      // home: ThongSoHoatDong(),
-       //home: XemBaoCao(),c
-        //home: SettingScreen(),
-        
-      home:LoginScreen(),
-
-     
-    );
+  return MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => LoginBloc(User())),
+        ],
+        child:  MaterialApp(
+          home: LoginScreen(),
+          debugShowCheckedModeBanner: false,
+        ));
   }
-}
+  }
+

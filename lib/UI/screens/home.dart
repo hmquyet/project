@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/home/main_draw.dart';
-import 'package:flutter_application_1/routes/ButtomNagivationBar.dart';
+import 'package:flutter_application_1/UI/screens/main_draw.dart';
+import 'package:flutter_application_1/UI/routes/ButtomNagivationBar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.menu),
             onPressed: () {},
           ), */
-          backgroundColor: Color.fromARGB(255, 53, 94, 74),
+          backgroundColor: Color.fromARGB(255, 0, 41, 77),
           title: Center(child: Text('Kiểm tra chất lượng sản phẩm')),
         ),
         
@@ -33,9 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Padding(
           padding: const EdgeInsets.only(top: 290),
           child: Center(
-              child: Container(
+            child: Container(
             width: 350,
-            height: 250,
+            height: 180,
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(30)),
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Color.fromARGB(255, 32, 30, 30)),
                       fixedSize: MaterialStateProperty.all<Size>(Size(300, 50)),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 53, 94, 74),
+                        Color.fromARGB(255, 0, 41, 77),
                       ),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -69,35 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         
                   }
                 ),
-                SizedBox(
-                  height: 12,
-                ),
-                ElevatedButton.icon(
-                  icon: Icon(Icons.settings_outlined),
-                  label: Text(
-                    'Cài đặt thông số',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Color.fromARGB(255, 255, 255, 255)),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: ((context) => ButtomNagivationBar(2))));
-                  },
-                  style: ButtonStyle(
-                      shadowColor: MaterialStateProperty.all<Color>(
-                          Color.fromARGB(255, 32, 30, 30)),
-                      fixedSize: MaterialStateProperty.all<Size>(Size(300, 50)),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 53, 94, 74),
-                      ),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ))),
-                ),
+                
                 SizedBox(
                   height: 12,
                 ),
@@ -113,14 +85,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: ((context) => ButtomNagivationBar(3))));
+                            builder: ((context) => ButtomNagivationBar(2))));
                   },
                   style: ButtonStyle(
                       shadowColor: MaterialStateProperty.all<Color>(
                           Color.fromARGB(255, 32, 30, 30)),
                       fixedSize: MaterialStateProperty.all<Size>(Size(300, 50)),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 53, 94, 74),
+                        Color.fromARGB(255, 0, 41, 77),
                       ),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
