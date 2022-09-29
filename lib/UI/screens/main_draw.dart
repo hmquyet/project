@@ -20,17 +20,7 @@ class MainDraw extends StatelessWidget {
               child: ClipOval(),
             ),
           ),
-          ListTile(
-              leading: Icon(Icons.person),
-              title: Text(
-                'Thông tin cá nhân',
-                style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(255, 79, 77, 77)),
-              ),
-              onTap: () =>
-                  Navigator.of(context).pushNamed(RoutesManager.Splashpage)),
+          
           ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text(

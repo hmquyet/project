@@ -42,7 +42,7 @@ dependencies:
   grouped_list: ^5.1.2
   equatable: ^2.0.5
 
-  flutter_bloc: ^8.1.1
+  flutter_bloc: ^7.3.1
   flutter_secure_storage: ^6.0.0
   dio: ^4.0.6
   animations: ^2.0.4

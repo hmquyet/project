@@ -25,9 +25,9 @@ class _ButtomNagivationBarState extends State<ButtomNagivationBar> {
     return Scaffold(
       body: Screens[widget.selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 0, 41, 77),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 3, 12, 31),//Color.fromARGB(255, 6, 40, 61)
+        selectedItemColor: Color.fromARGB(255, 255, 255, 255),
+        unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
         currentIndex: widget.selectedIndex,
         onTap: (index) => setState(
           () => widget.selectedIndex = index,
@@ -37,21 +37,21 @@ class _ButtomNagivationBarState extends State<ButtomNagivationBar> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
-              color: Color.fromARGB(255, 255, 255, 255),
+              
             ),
             label: 'Trang chủ',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.public_outlined,
-              color: Color.fromARGB(255, 255, 255, 255),
+              
             ),
             label: 'Thông số',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.description_outlined,
-              color: Color.fromARGB(255, 255, 255, 255),
+            
             ),
             label: 'Xem báo cáo',
           ),

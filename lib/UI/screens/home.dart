@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/home12.png'), fit: BoxFit.cover)),
+          image: DecorationImage(image: AssetImage('assets/images/home11.png'), fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Color.fromARGB(0, 255, 255, 255),
         appBar: AppBar(
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.menu),
             onPressed: () {},
           ), */
-          backgroundColor: Color.fromARGB(255, 0, 41, 77),
+          backgroundColor: Color.fromARGB(255, 6, 40, 61),
           title: Center(child: Text('Kiểm tra chất lượng sản phẩm')),
         ),
         
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Color.fromARGB(255, 32, 30, 30)),
                       fixedSize: MaterialStateProperty.all<Size>(Size(300, 50)),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 0, 41, 77),
+                        Color.fromARGB(255, 6, 40, 61),
                       ),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Color.fromARGB(255, 32, 30, 30)),
                       fixedSize: MaterialStateProperty.all<Size>(Size(300, 50)),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 0, 41, 77),
+                        Color.fromARGB(255, 6, 40, 61),
                       ),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(

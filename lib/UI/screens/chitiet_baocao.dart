@@ -9,7 +9,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 41, 77),
+        backgroundColor: Color.fromARGB(255, 6, 40, 61),
         title: Center(child: Text('Báo cáo  ' + reports.id.toString())),
       ),
       body: Container(

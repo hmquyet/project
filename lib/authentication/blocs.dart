@@ -16,7 +16,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<SubmitEvent>((event, emit) async {
       emit(LoginLoading());
        final result = await _account.getAccount();
-      if (event.email != result.email || event.password != result.password) {
+      if (event.email != result.email && event.password != result.password) {
         
         emit(LoginSuccessful());
       }

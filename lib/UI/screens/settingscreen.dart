@@ -18,7 +18,7 @@ class _SettingScreenState extends State<SettingScreen> {
     return Container(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 41, 77),
+        backgroundColor: Color.fromARGB(255, 6, 40, 61),
         title: Center(child: Text('Cài đặt thông số')),
       ),
      
@@ -33,7 +33,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 41, 77),
+                      color: Color.fromARGB(255, 6, 40, 61),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -75,7 +75,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 41, 77),
+                      color: Color.fromARGB(255, 6, 40, 61),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -117,7 +117,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 350,
                   height: 80,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 41, 77),
+                      color: Color.fromARGB(255, 6, 40, 61),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
